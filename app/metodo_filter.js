@@ -2,7 +2,7 @@ const botoes = document.querySelectorAll(".btn");
 
 botoes.forEach((botao) => botao.addEventListener("click", filtrarLivros));
 
-function filtrarLivros(params) {
+function filtrarLivros() {
   const elementoBtn = document.getElementById(this.id);
   const categoria = elementoBtn.value;
   livroFiltrados =
@@ -13,7 +13,6 @@ function filtrarLivros(params) {
 
   if (categoria == "disponivel") {
     const valorTotal = calcularValorTotalDeLivrosDisponiveis(livroFiltrados);
-    console.log(valorTotal);
     exibirValorTotalDosLivrosDisponiveisNaTela(valorTotal);
   }
 }
